@@ -1,6 +1,7 @@
 { compiler ? "ghc843" }:
 
 let
+  # SEE: https://nixos.wiki/wiki/FAQ/Pinning_Nixpkgs
   pkgs = let
      hostPkgs = import <nixpkgs> {};
      pinnedVersion = hostPkgs.lib.importJSON ./nixpkgs-version.json;
